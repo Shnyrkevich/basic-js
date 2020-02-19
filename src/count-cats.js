@@ -1,5 +1,5 @@
 module.exports = function countCats(mas) {
-  throw 'Not implemented';
+  //throw 'Not implemented';
   
   let counter = 0;
 

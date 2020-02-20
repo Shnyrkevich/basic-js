@@ -9,9 +9,9 @@ module.exports = function dateSample(sampleActivity) {
  
   if( typeof(sampleActivity) !== 'string' ){
     return false;
-  } else if(Number(sampleActivity) !== 'number'){
+  } else if(isNaN(parseFloat(sampleActivity))){
     return false;
-  } else if(Number(sampleActivity)<0 || Number(sampleActivity) >15){
+  } else if(parseFloat(sampleActivity) <= 0 || parseFloat(sampleActivity) >= 15){
     return false;
   } else {
     return Math.ceil(Math.log(MODERN_ACTIVITY/parseFloat(sampleActivity))/k);
